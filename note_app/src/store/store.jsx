@@ -1,10 +1,12 @@
 import {configureStore} from "@reduxjs/toolkit";
 
 import notesReducer from "./NoteSlice/NoteSlice"
+import colorReducer from "./ButtonSlice/ButtonSlice"
 
 const store = configureStore({
     reducer : {
-        notes : notesReducer
+        notes : notesReducer,
+        colors : colorReducer
     }
 });
 

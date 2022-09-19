@@ -1,11 +1,10 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {completedNote,deleteNote} from '../../store/NoteSlice/NoteSlice'
 
 const NoteItem = ({note}) => {
 
     const dispatch = useDispatch()
-    console.log(note)
 
     const complete = (id,isComplete) => {
         dispatch(completedNote({ id, isComplete}))
@@ -15,7 +14,7 @@ const NoteItem = ({note}) => {
     }
     
     return (
-    <div className='bg-slate-300 w-1/5 h-72 rounded-xl shadow-xl relative m-5'>
+    <div className={`${note.selectedColor} w-1/5 h-72 rounded-xl shadow-xl relative m-5`}>
         <div className={`${note.completed ? 'bg-gray-200' : 'bg-white'} w-full absolute top-3 left-3 h-72 p-5 rounded-lg shadow-xl`}>
             <div className='flex justify-between items-center' >
                 <div>
