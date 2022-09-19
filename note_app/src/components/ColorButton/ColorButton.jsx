@@ -4,7 +4,7 @@ const ColorButton = () => {
   return (
     <div className='ml-2 flex flex-col justify-between items-center'>
         <button className='bg-red-200 w-12 h-12 rounded-full flex justify-center items-center '>
-            <span> <i class="fa-solid fa-check"></i> </span>
+            <span> <i className="fa-solid fa-check"></i> </span>
         </button>
         <button className='bg-slate-300 w-12 h-12 rounded-full mt-1 '></button>
         <button className='bg-green-200 w-12 h-12 rounded-full mt-1 '></button>
