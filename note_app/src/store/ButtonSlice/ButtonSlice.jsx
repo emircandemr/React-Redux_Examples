@@ -6,28 +6,28 @@ const colorSlice = createSlice({
         colors : [
             {
                 id:1,
-                color : "bg-red-200",
+                color : "bg-red-300",
                 isActive : false
             },
             {
                 id:2,
-                color : "bg-slate-300",
+                color : "bg-slate-400",
                 isActive : false
 
             },
             {
                 id:3,
-                color : "bg-green-200",
+                color : "bg-green-400",
                 isActive : false
             },
             {
                 id:4,
-                color : "bg-blue-300",
+                color : "bg-blue-400",
                 isActive : false
             },
             {
                 id:5,
-                color : "bg-stone-400",
+                color : "bg-yellow-400",
                 isActive : false
             },
         ]

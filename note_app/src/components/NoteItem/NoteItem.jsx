@@ -11,8 +11,9 @@ const NoteItem = ({note}) => {
     }
     const destroy = (id) => {
         dispatch(deleteNote(id))
+        
     }
-    
+
     return (
     <div className={`${note.selectedColor} w-1/5 h-72 rounded-xl shadow-xl relative m-5`}>
         <div className={`${note.completed ? 'bg-gray-200' : 'bg-white'} w-full absolute top-3 left-3 h-72 p-5 rounded-lg shadow-xl`}>
@@ -30,7 +31,7 @@ const NoteItem = ({note}) => {
                 <p className={`${note.completed ? 'hidden' : 'block'} py-2`}>{note.text}</p>
 
             </div>
-            <button className={`${note.completed ? 'hidden' : 'block'} absolute bottom-5 right-5 border-2 border-slate-300 py-1 px-2 rounded-xl hover:bg-slate-300`} onClick={() => complete(note.id, !note.completed)}>Complete</button>
+            <button className={`${note.completed ? 'hidden' : 'block'} absolute bottom-5 right-5 border border-black py-1 px-2 rounded-xl hover:bg-slate-300`} onClick={() => complete(note.id, !note.completed)}>Complete</button>
             <button className={`${note.completed ? 'flex' : 'hidden'} absolute bottom-5 right-5 border-2 border-red-800 py-1 px-2 rounded-xl hover:bg-red-900 hover:text-white`} onClick={() => destroy(note.id)}>Delete</button>
 
         </div>
