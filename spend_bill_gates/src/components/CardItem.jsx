@@ -1,12 +1,9 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
 import {changeProduct} from '../store/ItemSlice/ItemSlice';
 import {useDispatch} from 'react-redux';
 
 const CardItem = ({item}) => {
   const dispatch = useDispatch();
-
-
 
   return (
     <div className='w-96 h-96 p-3 flex flex-col justify-start items-center bg-[#181818] m-10'>

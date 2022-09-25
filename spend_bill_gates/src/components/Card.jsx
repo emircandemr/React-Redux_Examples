@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux';
 import CardItem from './CardItem'
 
 const Card = () => {
-  const {product,money,total} = useSelector(state => state.items);
-
-
-  useEffect( () => {
-  },[money])
+  const {product,} = useSelector(state => state.items);
 
   return (
     <div className='flex flex-wrap justify-center items-center' >
