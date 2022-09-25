@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import CardItem from './CardItem'
 
 const Card = () => {
-  const {product,} = useSelector(state => state.items);
+  const {product} = useSelector(state => state.items);
 
   return (
     <div className='flex flex-wrap justify-center items-center' >
