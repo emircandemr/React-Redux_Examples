@@ -1,14 +1,20 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { contactSelectors } from '../../redux/ContactSlice/ContactSlice'
 import Form from './Form'
 import List from './List'
 
 const Contacts = () => {
+
+  const contactsLength = useSelector(contactSelectors.selectTotal)
   return (
-    <div className='w-1/2 h-4/5 flex flex-col justify-start py-10 items-center rounded-xl shadow-2xl bg-[#1a1b1c] border border-gray-500' >
-        <h1 className='text-4xl text-gray-400 tracking-widest mb-10' >Contacts</h1>
-        <Form/>
-        <List/>
-    </div>
+    <>
+    
+    <h1 className='text-4xl text-gray-400 tracking-widest mb-10' >{`Contacts ${contactsLength ? contactsLength : ""}`}</h1>
+    <Form/>
+    <List/>
+    
+    </>
   )
 }
 
