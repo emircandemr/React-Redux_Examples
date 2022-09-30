@@ -3,6 +3,8 @@ import {createSlice, createEntityAdapter} from "@reduxjs/toolkit"
 export const ContactAdapter = createEntityAdapter();
 const initialState = ContactAdapter.getInitialState(); // contactAdapter.getInitialState() returns an object with the following properties: ids, entities
 
+export const contactSelectors = ContactAdapter.getSelectors(state => state.contacts) 
+
 export const contactSlice = createSlice({
     name: "contacts",
     initialState,
