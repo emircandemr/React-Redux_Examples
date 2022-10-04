@@ -1,20 +1,22 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Background from './components/Background/Background'
+import Board from './components/Board/Board'
 import Settings from './components/Settings/Settings'
-import useGetImages from './hooks/useGetImages'
 
 
 function App() {
-  
-  const images = useGetImages()
-  console.log({images})
+  const [gameOptions, setGameOptions] = useState(null)
+
+  const startGame = (options) => {
+    setGameOptions(options)
+  }
 
   return (
     <div className="App">
       <h1>Memory Game</h1>
       <Background/>
-      <Settings/>
+      {!gameOptions ? <Settings startGame={startGame}/> : <Board gameOptions={gameOptions}/>}
     </div>
   )
 }
